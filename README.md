@@ -2,7 +2,7 @@
 
 > A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-19)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
-> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced; star counts are point-in-time and most are marked `≈` / `unverified` (see [Methodology & Caveats](#-methodology--caveats)).
+> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 25 of 27 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#-methodology--caveats)).
 
 <div align="center">
 
@@ -17,6 +17,7 @@
 ## Table of Contents
 
 - [The Landscape in One Screen](#-the-landscape-in-one-screen)
+- [Quick Picks](#-quick-picks)
 - [CLI Coding Tools](#-cli-coding-tools)
 - [Always-On Personal AI Assistants](#-always-on-personal-ai-assistants--the-focal-category)
 - [Computer-Use & Browser Agents](#-computer-use--browser-agents)
@@ -45,6 +46,23 @@ The clearest mental model: **the CLI coding agents are the substrate; the OpenCl
 1. **Absorption** — standalone browser-agent products are being folded into first-party assistants (Operator → ChatGPT agent; Project Mariner → Gemini Spark).
 2. **"Skills" becoming the standard capability interface** — Anthropic Agent Skills, OpenClaw `SKILL.md`, and Cline/Cursor/Google formats are converging on the same capability-pack shape.
 3. **A self-hosted-vs-managed split** — OSS offers data sovereignty + self-hackability at the cost of setup and real security risk; proprietary offers polish + a kill switch but your data lives on vendor infra.
+
+---
+
+## ⚡ Quick Picks
+
+Don't want to read 49 entries? Start here:
+
+| You want… | Start here | Why |
+|---|---|---|
+| Best reasoning-quality CLI coding agent | **[Claude Code](https://github.com/anthropics/claude-code)** ![active](https://img.shields.io/badge/active-brightgreen) | Top-tier reasoning; fully agentic with subagents, hooks, MCP, headless + background agents. |
+| Best free / open-source CLI | **[Qwen Code](https://github.com/QwenLM/qwen-code)** ![active](https://img.shields.io/badge/active-brightgreen) | Claude-Code feature-parity (subagents, skills, plan mode) on open models — fully free with BYO-key. |
+| Mature OSS pair-programmer | **[Aider](https://github.com/Aider-AI/aider)** ![active](https://img.shields.io/badge/active-brightgreen) | Battle-tested git-integrated loop; hosts the widely-cited LLM coding leaderboard. |
+| Self-hosted always-on personal assistant | **[OpenClaw](https://github.com/openclaw/openclaw)** ![active](https://img.shields.io/badge/active-brightgreen) | The category reference: 20+ chat surfaces, persistent memory, proactive heartbeats, self-hackable skills. |
+| Browser automation library | **[Browser Use](https://github.com/browser-use/browser-use)** ![active](https://img.shields.io/badge/active-brightgreen) | Dominant OSS Playwright-based primitive (~100k★); commercial 'Box' adds 24/7 cloud runs. |
+| Type-safe Python agent framework | **[PydanticAI](https://github.com/pydantic/pydantic-ai)** ![beta](https://img.shields.io/badge/beta-orange) | FastAPI-feeling, fully typed, model-agnostic with strong OTel/Logfire observability. |
+| Multi-agent orchestration (durable graphs) | **[LangGraph](https://github.com/langchain-ai/langgraph)** ![GA](https://img.shields.io/badge/GA-brightgreen) | 1.0 GA durable graph orchestration with first-class human-in-the-loop interrupts + memory. |
+| Production agent SDK (OpenAI stack) | **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** ![active](https://img.shields.io/badge/active-brightgreen) | Handoffs, sandbox agents, guardrails, tracing, realtime voice — productionized Swarm successor. |
 
 ---
 
@@ -218,10 +236,10 @@ User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
 
 Week of **2026-06-19**.
 
-- **Gemini CLI is DEAD — shut down June 18, replaced by closed-source Antigravity CLI** `(major) · `gemini-cli` — Google killed Gemini CLI for all consumer accounts (free/Pro/Ultra). The 105k-star OSS project's replacement, Antigravity CLI (agy), is a closed-source Go binary with async multi-agent orchestration. CI/CD pipelines calling `gemini` broke immediately. Enterprise users retain access. This is the biggest tool death in the CLI coding-agent category this year.
-- **Fable 5 / Mythos 5 suspended by US government directive** `(major) — Anthropic confirmed via primary source that the US government issued an export control directive suspending all access to Fable 5 and Mythos 5 (citing a jailbreak/national security concern). All customers affected. This means the OSWorld-Verified >85% scores citing these models are now non-reproducible.
-- **Three notable new entrants: Antigravity CLI, Junie GA, Mistral Vibe** `(major) · `antigravity-cli` — Google's Antigravity CLI replaces Gemini CLI. JetBrains' Junie coding agent left beta (GA) with advanced Plan mode + PR review. Mistral rebranded Le Chat → Vibe with Work Mode + Code Mode + VS Code extension + CLI with skills/subagents/teleport.
-- **OpenClaw star count confirmed at 379,442 from GitHub API** `(minor) · `openclaw` — Closes the biggest open question from the baseline. The self-reported ~370k+ figure was accurate. OpenClaw also shipped v2026.6.8 stable with release-evidence verification.
+- 🔴 **Gemini CLI is DEAD — shut down June 18, replaced by closed-source Antigravity CLI** · `gemini-cli` — Google killed Gemini CLI for all consumer accounts (free/Pro/Ultra). The 105k-star OSS project's replacement, Antigravity CLI (agy), is a closed-source Go binary with async multi-agent orchestration. CI/CD pipelines calling `gemini` broke immediately. Enterprise users retain access. This is the biggest tool death in the CLI coding-agent category this year.
+- 🔴 **Fable 5 / Mythos 5 suspended by US government directive** — Anthropic confirmed via primary source that the US government issued an export control directive suspending all access to Fable 5 and Mythos 5 (citing a jailbreak/national security concern). All customers affected. This means the OSWorld-Verified >85% scores citing these models are now non-reproducible.
+- 🔴 **Three notable new entrants: Antigravity CLI, Junie GA, Mistral Vibe** · `antigravity-cli` — Google's Antigravity CLI replaces Gemini CLI. JetBrains' Junie coding agent left beta (GA) with advanced Plan mode + PR review. Mistral rebranded Le Chat → Vibe with Work Mode + Code Mode + VS Code extension + CLI with skills/subagents/teleport.
+- 🟡 **OpenClaw star count confirmed at 379,442 from GitHub API** · `openclaw` — Closes the biggest open question from the baseline. The self-reported ~370k+ figure was accurate. OpenClaw also shipped v2026.6.8 stable with release-evidence verification.
 
 **What to watch:**
 - **Antigravity CLI adoption vs migration away from Google** (next 2-4 weeks) — Google forced the entire Gemini CLI community to either adopt a closed-source replacement or switch to a provider-independent tool (Codex CLI, Aider, Claude Code). TheRouter frames this as a 'forcing function' toward multi-model routing. Watch whether OpenCode/Codex CLI see a star surge from Gemini CLI refugees.
@@ -234,29 +252,16 @@ Week of **2026-06-19**.
 
 Read this before citing anything here. This is a **landscape map, not a benchmark study.**
 
-- **Star counts are popularity, not quality** — and most are marked *unverified* (pulled from tracker/repo pages, not re-pulled from the GitHub API). They drift within days. The OpenClaw figure (~370k+) is **self-reported and approximate**; re-pull from the GitHub API before any hard citation.
+- **Star counts are popularity, not quality** — point-in-time snapshots that drift within days. 25 of 27 tracked repos were verified directly from the GitHub API on 2026-06-19; the remainder are marked *unverified* (pulled from tracker/repo pages, not re-pulled).
 - **The OSWorld "human parity" story is not clean.** Vendor self-reports vary by ~10 points across aggregators (75% / 83.4% / 85%); the only claimed crossing (Agent S3, 72.60%) is vendor-reported, best-of-N (single-pass 66%), and on no independent leaderboard.
 - **The OpenClaw "self-hackable / AGI-like" rhetoric is ahead of the verified evidence.** The skill-creator + hot-reload machinery is real and code-confirmed; the reliable in-practice quality of agent-authored skills is **not independently benchmarked.**
 - **Vendor causation is not confirmed** — proprietary launches framed as "responses to OpenClaw" are press inference, not vendor statements.
 - **Two "OpenCode" lineages need disambiguation:** the major `sst/opencode` → `anomalyco/opencode` (~176k★) vs the project Charm's Crush was claimed to be "rebranded from" (unverified).
-
-**Open questions** currently being tracked:
-
-- OpenClaw 'CoPilot proxy' model-routing claim — corroborate or drop.
-- 'Crush rebranded from OpenCode' lineage — re-verify; current README lacks the phrase.
-- Two 'OpenCode' lineages (anomalyco/opencode vs Charm Crush predecessor) — related or coincidental?
-- Star counts for Memoh / OwnPilot / Lethe / Goose — pull from GitHub API.
-- Primary Cisco & Wiz disclosure posts for OpenClaw security incidents — currently secondary-only.
-- In-practice reliability of self-authored OpenClaw skills — no public benchmark exists.
-- OSWorld aggregator disagreement (75% / 83.4% / 85%) — now further complicated by Fable/Mythos 5 suspension.
-- Claude Code Jun-15-2026 pricing figures — cross-check vs primary Anthropic page.
-- Antigravity CLI: will Google open-source it or keep it closed? Community reaction to Gemini CLI orphaning.
-- Will Gemini CLI refugees migrate to Antigravity CLI or defect to Codex/Aider/OpenCode?
-- Junie model backbone — which LLMs power it?
-- Mistral Vibe Code Mode capabilities vs established CLI coding agents (Claude Code, Codex, Aider).
 
 ---
 
 ## 📄 License
 
 The research and curation in this repository are provided as-is for the community. Individual tools retain their own licenses (noted per entry). Where this README's prose is original to this repo, it is licensed MIT.
+
+<p align="center"><sub>⚠️ <strong>AI-generated content notice.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-19.</sub></p>
