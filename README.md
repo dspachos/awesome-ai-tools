@@ -2,7 +2,7 @@
 
 > A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-19)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
-> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 29 of 32 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#-methodology--caveats)).
+> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 29 of 32 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology-caveats).
 
 <div align="center">
 
@@ -16,18 +16,18 @@
 
 ## Table of Contents
 
-- [The Landscape in One Screen](#-the-landscape-in-one-screen)
-- [Quick Picks](#-quick-picks)
-- [CLI Coding Tools](#-cli-coding-tools)
-- [Always-On Personal AI Assistants](#-always-on-personal-ai-assistants--the-focal-category)
-- [Computer-Use & Browser Agents](#-computer-use--browser-agents)
-- [Agent Frameworks & SDKs](#-agent-frameworks--sdks)
-- [Desktop Apps & IDEs](#-desktop-apps--ides)
-- [Shutdowns & Archived](#-shutdowns--archived-avoid)
-- [Trending Repos Snapshot](#-trending-repos-snapshot--20260619)
-- [This Week](#-this-week)
-- [Methodology & Caveats](#-methodology--caveats)
-- [License](#-license)
+- [The Landscape in One Screen](#the-landscape-in-one-screen)
+- [Quick Picks](#quick-picks)
+- [CLI Coding Tools](#cli-coding-tools)
+- [Always-On Personal AI Assistants](#always-on-personal-ai-assistants)
+- [Computer-Use & Browser Agents](#computer-use-browser-agents)
+- [Agent Frameworks & SDKs](#agent-frameworks-sdks)
+- [Desktop Apps & IDEs](#desktop-apps-ides)
+- [Shutdowns & Archived](#shutdowns-archived-avoid)
+- [Trending Repos Snapshot](#trending-repos-snapshot-2026-06-19)
+- [This Week](#this-week)
+- [Methodology & Caveats](#methodology-caveats)
+- [License](#license)
 
 ---
 
@@ -151,7 +151,7 @@ Computer-use has stratified into three layers: an **API/builder layer**, a **fir
 - **[ChatGPT agent (ex-Operator/CUA)](https://chatgpt.com/features/agent/)** ![active](https://img.shields.io/badge/active-brightgreen) — Operator shut down Aug 31, 2025 → folded into ChatGPT 'agent mode'. CUA exposed via Agents SDK. Workspace Agents (Apr 2026) add Slack + scheduled/cloud persistence. · `Proprietary`
 - **[Apple Siri AI](https://www.apple.com/newsroom/)** ![beta](https://img.shields.io/badge/beta-orange) — Deliberately NOT vision-based computer use — acts via structured App Intents, not pixel clicks. Always-on cross-device, privacy-first. WWDC26. · `Proprietary`
 
-> Always-on consumer agents (Claude Cowork+Dispatch, Perplexity Computer, Gemini Spark, Manus) are listed under [Always-On Personal Assistants](#-always-on-personal-ai-assistants--the-focal-category).
+> Always-on consumer agents (Claude Cowork+Dispatch, Perplexity Computer, Gemini Spark, Manus) are listed under [Always-On Personal Assistants](#always-on-personal-ai-assistants).
 
 ### ⚠️ Benchmark reality check (OSWorld)
 
