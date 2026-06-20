@@ -23,7 +23,7 @@
 - [Computer-Use & Browser Agents](#-computer-use--browser-agents)
 - [Agent Frameworks & SDKs](#-agent-frameworks--sdks)
 - [Desktop Apps & IDEs](#-desktop-apps--ides)
-- [Shutdowns & Archived](#-shutdowns--archived-dont-recommend-these)
+- [Shutdowns & Archived](#-shutdowns--archived-avoid)
 - [Trending Repos Snapshot](#-trending-repos-snapshot--20260619)
 - [This Week](#-this-week)
 - [Methodology & Caveats](#-methodology--caveats)
@@ -46,15 +46,15 @@ The clearest mental model: **the CLI coding agents are the substrate; the OpenCl
 
 1. **Absorption** — standalone browser-agent products are being folded into first-party assistants (Operator → ChatGPT agent; Project Mariner → Gemini Spark).
 2. **"Skills" becoming the standard capability interface** — Anthropic Agent Skills, OpenClaw `SKILL.md`, and Cline/Cursor/Google formats are converging on the same capability-pack shape.
-3. **A self-hosted-vs-managed split** — OSS offers data sovereignty + self-hackability at the cost of setup and real security risk; proprietary offers polish + a kill switch but your data lives on vendor infra.
+3. **A self-hosted-vs-managed split** — OSS offers data sovereignty + self-hackability at the cost of setup and real security risk; proprietary offerings add polish + a kill switch but data lives on vendor infra.
 
 ---
 
 ## ⚡ Quick Picks
 
-Don't want to read 59 entries? Start here:
+Looking for a specific use case? These are the top picks across each category:
 
-| You want… | Start here | Why |
+| Use case | Recommended | Why |
 |---|---|---|
 | Best reasoning-quality CLI coding agent | **[Claude Code](https://github.com/anthropics/claude-code)** ![active](https://img.shields.io/badge/active-brightgreen) | Top-tier reasoning; fully agentic with subagents, hooks, MCP, headless + background agents. |
 | Best free / open-source CLI | **[Qwen Code](https://github.com/QwenLM/qwen-code)** ![active](https://img.shields.io/badge/active-brightgreen) | Claude-Code feature-parity (subagents, skills, plan mode) on open models — fully free with BYO-key. |
@@ -96,7 +96,7 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 - **[Warp](https://github.com/warpdotdev/warp)** ![active](https://img.shields.io/badge/active-brightgreen) — AI-native terminal — replaces the shell itself (NL→bash, block-based dev env), not a coding agent running inside one. · `Client AGPL-3.0 / server proprietary` · Rust · ≈62.0k★ *GitHub API, 2026-06-19*
 - **[Continue](https://github.com/continuedev/continue)** ![archived](https://img.shields.io/badge/archived-lightgrey) — ARCHIVED after final 2.0.0 release (VS Code ext, cn CLI, JetBrains plugin). Historical: PR-checks agents. · `Apache-2.0` · TypeScript
 
-> **CLI takeaways:** pricing is converging on subscription-plus-credits. The OSS field has standardized on multi-provider + BYO-key. Discontinuations matter (Q CLI → Kiro OSS→closed; Continue archived; Cody → Amp) — don't recommend the deprecated ones.
+> **CLI takeaways:** pricing is converging on subscription-plus-credits. The OSS field has standardized on multi-provider + BYO-key. Discontinuations matter (Q CLI → Kiro OSS→closed; Continue archived; Cody → Amp) — the deprecated tools are best avoided.
 
 ---
 
@@ -213,9 +213,9 @@ The GUI counterparts to the CLI coding agents. Some are standalone IDEs (Cursor,
 
 ---
 
-## 🪦 Shutdowns & Archived (don't recommend these)
+## 🪦 Shutdowns & Archived (avoid)
 
-These were once relevant but are now deprecated, archived, or dead — listed so you don't accidentally recommend them.
+These tools were once relevant but are now deprecated, archived, or dead. Listed for reference — avoid recommending them.
 
 | Tool | Status | What happened |
 |---|---|---|
