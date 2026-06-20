@@ -284,4 +284,4 @@ Read this before citing anything here. This is a **landscape map, not a benchmar
 
 The research and curation in this repository are provided as-is for the community. Individual tools retain their own licenses (noted per entry). Where this README's prose is original to this repo, it is licensed MIT.
 
-<p align="center"><sub>⚠️ <strong>AI-generated content notice.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-19.</sub></p>
+<p align="center"><sub>⚠️ <strong>NOTICE.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-19.</sub></p>
