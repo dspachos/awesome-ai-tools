@@ -2,7 +2,7 @@
 
 > A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-19)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
-> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 29 of 32 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology-caveats).
+> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 29 of 32 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
 
 <div align="center">
 
@@ -16,21 +16,22 @@
 
 ## Table of Contents
 
-- [The Landscape in One Screen](#the-landscape-in-one-screen)
+- [The Landscape in One Screen](#landscape)
 - [Quick Picks](#quick-picks)
-- [CLI Coding Tools](#cli-coding-tools)
-- [Always-On Personal AI Assistants](#always-on-personal-ai-assistants)
-- [Computer-Use & Browser Agents](#computer-use-browser-agents)
-- [Agent Frameworks & SDKs](#agent-frameworks-sdks)
-- [Desktop Apps & IDEs](#desktop-apps-ides)
-- [Shutdowns & Archived](#shutdowns-archived-avoid)
-- [Trending Repos Snapshot](#trending-repos-snapshot-2026-06-19)
+- [CLI Coding Tools](#cli)
+- [Always-On Personal AI Assistants](#assistants)
+- [Computer-Use & Browser Agents](#computer-use)
+- [Agent Frameworks & SDKs](#frameworks)
+- [Desktop Apps & IDEs](#desktop)
+- [Shutdowns & Archived](#shutdowns)
+- [Trending Repos Snapshot](#trending)
 - [This Week](#this-week)
-- [Methodology & Caveats](#methodology-caveats)
+- [Methodology & Caveats](#methodology)
 - [License](#license)
 
 ---
 
+<a name="landscape"></a>
 ## 🧭 The Landscape in One Screen
 
 The clearest mental model: **the CLI coding agents are the substrate; the OpenClaw-style always-on personal assistants are the new application layer that orchestrates them.** As of 2026-06-19, the landscape has consolidated around four overlapping layers, with the headline story being a genuinely new product category — self-hosted, chat-reachable, persistent, proactive, computer-controlling assistants.
@@ -50,6 +51,7 @@ The clearest mental model: **the CLI coding agents are the substrate; the OpenCl
 
 ---
 
+<a name="quick-picks"></a>
 ## ⚡ Quick Picks
 
 Looking for a specific use case? These are the top picks across each category:
@@ -69,6 +71,7 @@ Looking for a specific use case? These are the top picks across each category:
 
 ---
 
+<a name="cli"></a>
 ## ⌨️ CLI Coding Tools
 
 The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscription-tied), **open-source multi-provider agents**, and **AI-native terminals**. **Pricing has converged on subscription-plus-credits**. ⚠️ Gemini CLI was **shut down June 18** — replaced by closed-source Antigravity CLI.
@@ -100,6 +103,7 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 
 ---
 
+<a name="assistants"></a>
 ## 🤖 Always-On Personal AI Assistants — *the focal category*
 
 > The defining new category of 2026: open-source, self-hosted, always-on personal AI assistants — chat-reachable, persistent, proactive, computer-controlling, self-extensible.
@@ -133,6 +137,7 @@ Recent tech press frames these as the industry's answer to OpenClaw. *(Note: "re
 
 ---
 
+<a name="computer-use"></a>
 ## 🖱️ Computer-Use & Browser Agents
 
 Computer-use has stratified into three layers: an **API/builder layer**, a **first-party consumer-agent layer**, and a fast-moving **benchmark story**.
@@ -151,7 +156,7 @@ Computer-use has stratified into three layers: an **API/builder layer**, a **fir
 - **[ChatGPT agent (ex-Operator/CUA)](https://chatgpt.com/features/agent/)** ![active](https://img.shields.io/badge/active-brightgreen) — Operator shut down Aug 31, 2025 → folded into ChatGPT 'agent mode'. CUA exposed via Agents SDK. Workspace Agents (Apr 2026) add Slack + scheduled/cloud persistence. · `Proprietary`
 - **[Apple Siri AI](https://www.apple.com/newsroom/)** ![beta](https://img.shields.io/badge/beta-orange) — Deliberately NOT vision-based computer use — acts via structured App Intents, not pixel clicks. Always-on cross-device, privacy-first. WWDC26. · `Proprietary`
 
-> Always-on consumer agents (Claude Cowork+Dispatch, Perplexity Computer, Gemini Spark, Manus) are listed under [Always-On Personal Assistants](#always-on-personal-ai-assistants).
+> Always-on consumer agents (Claude Cowork+Dispatch, Perplexity Computer, Gemini Spark, Manus) are listed under [Always-On Personal Assistants](#assistants).
 
 ### ⚠️ Benchmark reality check (OSWorld)
 
@@ -169,6 +174,7 @@ The headline numbers are moving fast and **almost entirely vendor-self-reported*
 
 ---
 
+<a name="frameworks"></a>
 ## 🧩 Agent Frameworks & SDKs
 
 ### The three-vendor SDK race
@@ -198,6 +204,7 @@ The headline numbers are moving fast and **almost entirely vendor-self-reported*
 
 ---
 
+<a name="desktop"></a>
 ## 🖥️ Desktop Apps & IDEs
 
 The GUI counterparts to the CLI coding agents. Some are standalone IDEs (Cursor, Windsurf, Zed); others are native desktop wrappers around vendor agent stacks (Claude Desktop, Codex Desktop, GitHub Copilot App). The pattern in 2026: **every major coding agent now ships a desktop app** — the terminal is no longer the only surface.
@@ -213,6 +220,7 @@ The GUI counterparts to the CLI coding agents. Some are standalone IDEs (Cursor,
 
 ---
 
+<a name="shutdowns"></a>
 ## 🪦 Shutdowns & Archived (avoid)
 
 These tools were once relevant but are now deprecated, archived, or dead. Listed for reference — avoid recommending them.
@@ -231,6 +239,7 @@ These tools were once relevant but are now deprecated, archived, or dead. Listed
 
 ---
 
+<a name="trending"></a>
 ## 📈 Trending Repos Snapshot (2026-06-19)
 
 User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
@@ -252,6 +261,7 @@ User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
 
 ---
 
+<a name="this-week"></a>
 ## 🗓️ This Week
 
 Week of **2026-06-19**.
@@ -268,6 +278,7 @@ Week of **2026-06-19**.
 
 ---
 
+<a name="methodology"></a>
 ## 🔬 Methodology & Caveats
 
 Read this before citing anything here. This is a **landscape map, not a benchmark study.**
@@ -280,6 +291,7 @@ Read this before citing anything here. This is a **landscape map, not a benchmar
 
 ---
 
+<a name="license"></a>
 ## 📄 License
 
 The research and curation in this repository are provided as-is for the community. Individual tools retain their own licenses (noted per entry). Where this README's prose is original to this repo, it is licensed MIT.
