@@ -1,12 +1,12 @@
 # Awesome AI Tools — 2026
 
-> A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-19)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
+> A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-23)** — CLI coding agents, agent multiplexers that run them in parallel, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
 > Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 29 of 32 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
 
 <div align="center">
 
-**59 tools** · **4 overlapping layers** · **Updated 2026-06-19**
+**65 tools** · **4 overlapping layers** · **Updated 2026-06-23**
 
 </div>
 
@@ -19,6 +19,7 @@
 - [The Landscape in One Screen](#landscape)
 - [Quick Picks](#quick-picks)
 - [CLI Coding Tools](#cli)
+- [Agent Multiplexers & Session Managers](#multiplexers)
 - [Always-On Personal AI Assistants](#assistants)
 - [Computer-Use & Browser Agents](#computer-use)
 - [Agent Frameworks & SDKs](#frameworks)
@@ -48,6 +49,7 @@ The clearest mental model: **the CLI coding agents are the substrate; the OpenCl
 1. **Absorption** — standalone browser-agent products are being folded into first-party assistants (Operator → ChatGPT agent; Project Mariner → Gemini Spark).
 2. **"Skills" becoming the standard capability interface** — Anthropic Agent Skills, OpenClaw `SKILL.md`, and Cline/Cursor/Google formats are converging on the same capability-pack shape.
 3. **A self-hosted-vs-managed split** — OSS offers data sovereignty + self-hackability at the cost of setup and real security risk; proprietary offerings add polish + a kill switch but data lives on vendor infra.
+4. **Agent multiplexing as the new infra layer** — a wave of terminal-native tools (led by Herdr) now run, persist, and coordinate many coding agents the way tmux does terminals, surfacing agent state and exposing a scriptable control surface. See [Agent Multiplexers & Session Managers](#multiplexers).
 
 ---
 
@@ -68,6 +70,7 @@ Looking for a specific use case? These are the top picks across each category:
 | Production agent SDK (OpenAI stack) | **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** ![active](https://img.shields.io/badge/active-brightgreen) | Handoffs, sandbox agents, guardrails, tracing, realtime voice — productionized Swarm successor. |
 | Best AI-native IDE | **[Cursor](https://cursor.com)** ![active](https://img.shields.io/badge/active-brightgreen) | $100M+ ARR, best @codebase indexing, Composer multi-file edits, Background Agents, BugBot PR review. |
 | Fastest editor + zero lock-in | **[Zed](https://github.com/zed-industries/zed)** ![active](https://img.shields.io/badge/active-brightgreen) | Rust-native sub-second cold start, open agent protocol, BYO-key, native multiplayer. 85k+ stars. |
+| Running many coding agents in parallel | **[Herdr](https://herdr.dev)** ![active](https://img.shields.io/badge/active-brightgreen) | "tmux for coding agents": persistent PTY sessions, agent state at a glance, remote SSH attach, a CLI/socket API agents can drive. |
 
 ---
 
@@ -100,6 +103,26 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 - **[Continue](https://github.com/continuedev/continue)** ![archived](https://img.shields.io/badge/archived-lightgrey) — ARCHIVED after final 2.0.0 release (VS Code ext, cn CLI, JetBrains plugin). Historical: PR-checks agents. · `Apache-2.0` · TypeScript
 
 > **CLI takeaways:** pricing is converging on subscription-plus-credits. The OSS field has standardized on multi-provider + BYO-key. Discontinuations matter (Q CLI → Kiro OSS→closed; Continue archived; Cody → Amp) — the deprecated tools are best avoided.
+
+---
+
+<a name="multiplexers"></a>
+## 🔀 Agent Multiplexers & Session Managers
+
+A distinct tooling category that sits *on top of* the [CLI coding agents](#cli): terminal-native multiplexers that run, persist, and coordinate many agents at once — "tmux for coding agents." Unlike [AI-native terminals](#cli) (which replace the shell) or [desktop IDEs](#desktop) (which add a GUI), these keep real PTYs and make them **agent-aware**: blocked / working / done state at a glance, detach-and-reattach persistence, remote SSH attach, and a scriptable control surface agents can drive themselves. The category is **young** — Herdr is the clear traction leader; the rest are early-stage OSS.
+
+### The multiplexer wave
+
+- **[Herdr](https://herdr.dev)** ![active](https://img.shields.io/badge/active-brightgreen) — The category reference: "tmux for coding agents." Mouse-first panes/tabs, semantic agent state (blocked / working / done / idle), session persistence across detach, native remote SSH attach (run on a server, drive it from a phone), and a CLI + JSON socket API that agents can orchestrate. Integrations add richer state + resume for Claude Code, Codex, Amp, OpenCode, Cursor, Copilot, and more. · `AGPL-3.0-or-later (+ commercial)` · Rust · ≈6.9k★ *GitHub API, 2026-06-23 — [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr)*
+- **[dmux](https://github.com/standardagents/dmux)** ![active](https://img.shields.io/badge/active-brightgreen) — Parallel coding agents with tmux + git worktrees. Each task gets an isolated worktree; branch, run, and merge in parallel. · `MIT` · ≈1.7k★ *GitHub API, 2026-06-23*
+- **[amux](https://github.com/andyrewlee/amux)** ![active](https://img.shields.io/badge/active-brightgreen) — Go TUI for easily running parallel coding agents. · `MIT` · Go · ≈132★ *GitHub API, 2026-06-23*
+- **[swarm](https://github.com/penberg/swarm)** ![active](https://img.shields.io/badge/active-brightgreen) — Manage a swarm of coding agents (penberg/swarm — distinct from OpenAI's deprecated Swarm SDK). · `MIT` · Rust · ≈97★ *GitHub API, 2026-06-23*
+- **[Conduit](https://github.com/conduit-cli/conduit)** ![active](https://img.shields.io/badge/active-brightgreen) — "Run a team of AI agents, in your terminal." · `MIT` · Rust · ≈92★ *GitHub API, 2026-06-23*
+- **[jmux](https://github.com/jarredkenny/jmux)** ![active](https://img.shields.io/badge/active-brightgreen) — A tmux environment for parallel coding agents with a persistent sidebar showing every session's status and what needs human attention. · `AGPL-3.0` · TypeScript · ≈59★ *GitHub API, 2026-06-23*
+
+> **Adjacent, listed elsewhere:** [GitKraken Kepler](#desktop) (an "Agentic Development Environment" that drives parallel agents through to merge) overlaps from the GUI/IDE side; [Warp](#cli) (an AI-native terminal that replaces the shell) is a different shape entirely — a terminal, not an agent multiplexer.
+
+> **Category takeaways:** every entry leans on tmux + git worktrees for isolation and persistence; the differentiator is *agent-awareness* (surfacing state and exposing an API agents call back into). Most are only months old and under ~150★ — treat the counts as a maturity signal, not a quality verdict.
 
 ---
 
@@ -270,6 +293,7 @@ Week of **2026-06-19**.
 - 🔴 **Fable 5 / Mythos 5 suspended by US government directive** — Anthropic confirmed via primary source that the US government issued an export control directive suspending all access to Fable 5 and Mythos 5 (citing a jailbreak/national security concern). All customers affected. This means the OSWorld-Verified >85% scores citing these models are now non-reproducible.
 - 🔴 **Three notable new entrants: Antigravity CLI, Junie GA, Mistral Vibe** · `antigravity-cli` — Google's Antigravity CLI replaces Gemini CLI. JetBrains' Junie coding agent left beta (GA) with advanced Plan mode + PR review. Mistral rebranded Le Chat → Vibe with Work Mode + Code Mode + VS Code extension + CLI with skills/subagents/teleport.
 - 🟡 **OpenClaw star count confirmed at 379,442 from GitHub API** · `openclaw` — The self-reported ~370k+ figure was accurate — now confirmed via API. OpenClaw also shipped v2026.6.8 stable with release-evidence verification.
+- 🟢 **New category added: Agent Multiplexers & Session Managers** · `herdr` — Terminal-native multiplexers that run, persist, and coordinate many coding agents ("tmux for coding agents"). Lead entry **Herdr** (~6.9k★, AGPL-3.0, Rust); verified peers **dmux** (~1.7k★), **amux**, **swarm**, **Conduit**, **jmux**. All 6 entries verified via GitHub API on 2026-06-23.
 
 **What to watch:**
 - **Antigravity CLI adoption vs migration away from Google** (next 2-4 weeks) — Google forced the entire Gemini CLI community to either adopt a closed-source replacement or switch to a provider-independent tool (Codex CLI, Aider, Claude Code). TheRouter frames this as a 'forcing function' toward multi-model routing. Watch whether OpenCode/Codex CLI see a star surge from Gemini CLI refugees.
@@ -296,4 +320,4 @@ Read this before citing anything here. This is a **landscape map, not a benchmar
 
 The research and curation in this repository are provided as-is for the community. Individual tools retain their own licenses (noted per entry). Where this README's prose is original to this repo, it is licensed MIT.
 
-<p align="center"><sub>⚠️ <strong>NOTICE.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-19.</sub></p>
+<p align="center"><sub>⚠️ <strong>NOTICE.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-19; Agent Multiplexers category added 2026-06-23.</sub></p>
