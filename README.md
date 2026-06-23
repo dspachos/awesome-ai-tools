@@ -2,11 +2,11 @@
 
 > A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-19)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
-> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 32 of 35 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
+> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 37 of 40 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
 
 <div align="center">
 
-**64 tools** · **4 overlapping layers** · **Updated 2026-06-19**
+**69 tools** · **4 overlapping layers** · **Updated 2026-06-19**
 
 </div>
 
@@ -156,6 +156,7 @@ Computer-use has stratified into three layers: an **API/builder layer**, a **fir
 
 - **[ChatGPT agent (ex-Operator/CUA)](https://chatgpt.com/features/agent/)** ![active](https://img.shields.io/badge/active-brightgreen) — Operator shut down Aug 31, 2025 → folded into ChatGPT 'agent mode'. CUA exposed via Agents SDK. Workspace Agents (Apr 2026) add Slack + scheduled/cloud persistence. · `Proprietary`
 - **[Apple Siri AI](https://www.apple.com/newsroom/)** ![beta](https://img.shields.io/badge/beta-orange) — Deliberately NOT vision-based computer use — acts via structured App Intents, not pixel clicks. Always-on cross-device, privacy-first. WWDC26. · `Proprietary`
+- **[Project Mariner](https://labs.google.com/mariner/landing)** ![dead](https://img.shields.io/badge/dead-red) — SHUT DOWN May 4, 2026. Browser automation proved too brittle (CAPTCHAs, anti-bot, layout drift). Tech folded into Gemini surfaces. · `Proprietary`
 
 > Always-on consumer agents (Claude Cowork+Dispatch, Perplexity Computer, Gemini Spark, Manus) are listed under [Always-On Personal Assistants](#assistants).
 
@@ -226,6 +227,11 @@ The GUI counterparts to the CLI coding agents. Some are standalone IDEs (Cursor,
 
 These tools don't run agents themselves — they manage parallel AI coding agent sessions the way tmux manages terminals. The problem they solve: when you're running 3–10 agents across separate terminals, you lose track of what's blocked, what's done, and what needs input. The category emerged in early 2026 and is moving fast.
 
+- **[cmux](https://github.com/manaflow-ai/cmux)** ![active](https://img.shields.io/badge/active-brightgreen) — The dominant agent multiplexer by traction (22.7k★). Native macOS terminal built on libghostty with agent-state awareness, subagent-to-pane promotion, built-in browser automation pane, iOS app (beta), Unix socket + CLI API, skills system, SSH remote attach. Survives full reboots with session restore. · `MIT` · Swift (AppKit + libghostty) · ≈22.7k★ *GitHub API, 2026-06-19*
+- **[Agent of Empires (AoE)](https://github.com/agent-of-empires/agent-of-empires)** ![active](https://img.shields.io/badge/active-brightgreen) — TUI + web dashboard (PWA) session manager for AI coding agents. Each agent in its own tmux session + git worktree. Docker sandboxing option. Mobile phone access via built-in HTTP server. 104 releases — one of the most actively developed in the category. · `MIT` · Rust · ≈2.6k★ *GitHub API, 2026-06-19*
+- **[dmux](https://github.com/standardagents/dmux)** ![active](https://img.shields.io/badge/active-brightgreen) — Dev agent multiplexer for git worktrees. Each pane gets its own worktree + branch for full isolation. Multi-select agent launches (run different agents per pane). AI-named branches/commits, smart one-step merge, built-in file browser, lifecycle hooks. · `MIT` · TypeScript, Shell · ≈1.7k★ *GitHub API, 2026-06-19*
+- **[Parallel Code](https://github.com/johannesjo/parallel-code)** ![active](https://img.shields.io/badge/active-brightgreen) — GUI desktop app for parallel multi-agent coding. Auto-creates git worktree per task (zero conflict between agents). QR-code phone monitoring over Wi-Fi/Tailscale. Keyboard-first navigation. Merge back to main from sidebar. · `MIT` · TypeScript · ≈744★ *GitHub API, 2026-06-19*
+- **[Agent Deck](https://github.com/asheshgoplani/agent-deck)** ![active](https://img.shields.io/badge/active-brightgreen) — Go-based TUI 'command center' for AI coding agents. 343 releases — most iterated tool in category. Groups, search, session forking, git worktrees, per-agent cost tracking, and a phone-controlled 'Conductor' mode for fleet management. · `MIT` · Go · ≈352★ *GitHub API, 2026-06-19*
 - **[Herdr](https://github.com/mxhm/herdr)** ![active](https://img.shields.io/badge/active-brightgreen) — The reference agent multiplexer — tmux for AI coding agents. Workspaces, tabs, panes with agent-state awareness (blocked/working/done/idle). Detach/reattach over SSH, sessions persist. Unix socket API lets agents orchestrate each other. No GUI, no Electron, runs anywhere you can ssh. · `MIT` · Rust
 - **[Quil](https://quil.cc)** ![active](https://img.shields.io/badge/active-brightgreen) — Reboot-proof terminal multiplexer for AI dev. Snapshots workspace to disk continuously — close laptop, reboot, type 'quil' and everything restores in <30s incl. auto-resuming Claude Code sessions. Built-in MCP server (18 tools) makes your terminal addressable by agents. Typed panes (not generic shells). · `Proprietary` · Rust (single binary)
 - **[TUICommander](https://github.com/sstraus/tuicommander)** ![active](https://img.shields.io/badge/active-brightgreen) — AI-native desktop IDE for multi-agent dev. Up to 50 parallel sessions, each in its own git worktree. Rate-limit detection with countdown timers, question/prompt detection, usage tracking with 7-day charts + 52-week heatmaps. Tauri + SolidJS + Rust. · `Apache-2.0` · Rust, SolidJS, Tauri · ≈87★ *GitHub API, 2026-06-19*
@@ -297,7 +303,7 @@ Week of **2026-06-19**.
 
 Read this before citing anything here. This is a **landscape map, not a benchmark study.**
 
-- **Star counts are popularity, not quality** — point-in-time snapshots that drift within days. 32 of 35 tracked repos were verified directly from the GitHub API on 2026-06-19; the remainder are marked *unverified* (pulled from tracker/repo pages, not re-pulled).
+- **Star counts are popularity, not quality** — point-in-time snapshots that drift within days. 37 of 40 tracked repos were verified directly from the GitHub API on 2026-06-19; the remainder are marked *unverified* (pulled from tracker/repo pages, not re-pulled).
 - **The OSWorld "human parity" story is not clean.** Vendor self-reports vary by ~10 points across aggregators (75% / 83.4% / 85%); the only claimed crossing (Agent S3, 72.60%) is vendor-reported, best-of-N (single-pass 66%), and on no independent leaderboard.
 - **The OpenClaw "self-hackable / AGI-like" rhetoric is ahead of the verified evidence.** The skill-creator + hot-reload machinery is real and code-confirmed; the reliable in-practice quality of agent-authored skills is **not independently benchmarked.**
 - **Vendor causation is not confirmed** — proprietary launches framed as "responses to OpenClaw" are press inference, not vendor statements.
