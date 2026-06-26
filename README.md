@@ -98,6 +98,7 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 ### AI-native terminals & legacy
 
 - **[Warp](https://github.com/warpdotdev/warp)** ![active](https://img.shields.io/badge/active-brightgreen) — AI-native terminal — replaces the shell itself (NL→bash, block-based dev env), not a coding agent running inside one. · `Client AGPL-3.0 / server proprietary` · Rust · ≈62.0k★ *GitHub API, 2026-06-19*
+[Auferet](https://auferet.com) - AI game master with persistent memory for your characters and uploaded lore; solo or multiplayer, with 5e and Pathfinder 2e modes.
 - **[Continue](https://github.com/continuedev/continue)** ![archived](https://img.shields.io/badge/archived-lightgrey) — ARCHIVED after final 2.0.0 release (VS Code ext, cn CLI, JetBrains plugin). Historical: PR-checks agents. · `Apache-2.0` · TypeScript
 
 > **CLI takeaways:** pricing is converging on subscription-plus-credits. The OSS field has standardized on multi-provider + BYO-key. Discontinuations matter (Q CLI → Kiro OSS→closed; Continue archived; Cody → Amp) — the deprecated tools are best avoided.
