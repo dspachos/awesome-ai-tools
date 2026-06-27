@@ -293,15 +293,31 @@ User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
 
 Week of **2026-06-27**.
 
-- 🔴 **Gemini CLI is DEAD — shut down June 18, replaced by closed-source Antigravity CLI** · `gemini-cli` — Google killed Gemini CLI for all consumer accounts (free/Pro/Ultra). The 105k-star OSS project's replacement, Antigravity CLI (agy), is a closed-source Go binary with async multi-agent orchestration. CI/CD pipelines calling `gemini` broke immediately. Enterprise users retain access. This is the biggest tool death in the CLI coding-agent category this year.
-- 🔴 **Fable 5 / Mythos 5 suspended by US government directive** — Anthropic confirmed via primary source that the US government issued an export control directive suspending all access to Fable 5 and Mythos 5 (citing a jailbreak/national security concern). All customers affected. This means the OSWorld-Verified >85% scores citing these models are now non-reproducible.
-- 🔴 **Three notable new entrants: Antigravity CLI, Junie GA, Mistral Vibe** · `antigravity-cli` — Google's Antigravity CLI replaces Gemini CLI. JetBrains' Junie coding agent left beta (GA) with advanced Plan mode + PR review. Mistral rebranded Le Chat → Vibe with Work Mode + Code Mode + VS Code extension + CLI with skills/subagents/teleport.
-- 🟡 **OpenClaw star count confirmed at 379,442 from GitHub API** · `openclaw` — The self-reported ~370k+ figure was accurate — now confirmed via API. OpenClaw also shipped v2026.6.8 stable with release-evidence verification.
+### 🆕 New & Updated This Week
+
+| Tool | Category | Change | Stars | Note |
+|------|----------|--------|-------|------|
+| **[MiMo Code](https://github.com/XiaomiMiMo/MiMo-Code)** | CLI coding agent | 🆕 added | 10.9k★ | Xiaomi's open-source terminal agent on OpenCode core, long-term memory, MIT |
+| **[Grok Build](https://x.ai/cli)** | CLI coding agent | 🆕 added | — | xAI CLI with /goal autonomous mode + built-in verification |
+| **[Stably Orca](https://github.com/stablyai/orca)** | Agent manager / multiplexer | 🆕 added | 8.0k★ | Fleet ADE for 30+ parallel agents, Design Mode, mobile companion |
+| **[QwenPaw](https://github.com/agentscope-ai/QwenPaw)** | Always-on assistant | 🆕 added | 20.2k★ | Alibaba AgentScope self-hostable personal assistant (20k★) |
+| **[AgentGateway](https://github.com/agentgateway/agentgateway)** | Agent framework / SDK | 🆕 added | 3.5k★ | AI-native proxy (Linux Foundation, Rust) for agent-to-LLM/MCP/A2A |
+| **[Continue](https://github.com/continuedev/continue)** | CLI coding agent | ⚠️ shutdown | 34.5k★ | Acquired by Cursor (SpaceX bought Cursor for $60B), repo read-only Jul 15 |
+| **[PydanticAI](https://github.com/pydantic/pydantic-ai)** | Agent framework / SDK | 🔄 updated | 18.0k★ | v2.0.0 stable — harness-first design with capabilities primitive |
+| **[OpenClaw](https://github.com/openclaw/openclaw)** | Always-on assistant | 🔄 updated | 380.6k★ | v2026.6.10 stable (auto fast mode), hits 380k★ |
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | Always-on assistant | 🔄 updated | 203.9k★ | Overtook OpenClaw on OpenRouter (911B vs 146B tokens) |
+
+---
+
+- 🔴 **Continue.dev acquired by Cursor (SpaceX) — repo goes read-only July 15** · `continue` — Around June 16, Continue's homepage was replaced with a shutdown notice. The company was acquired by Cursor, which SpaceX acquired for $60B. The 34.5k-star codebase stays public under Apache 2.0 but the hosted service, accounts, and roadmap are dead. Users have until July 15 to export data.
+- 🔴 **Hermes Agent overtakes OpenClaw on OpenRouter token volume (911B vs 146B)** · `hermes-agent` — Despite OpenClaw leading on GitHub stars (380k vs 204k) and npm downloads (4.27M/wk), Hermes now processes ~6x more daily tokens on OpenRouter. Cumulative: Hermes 8.14T tokens vs OpenClaw 7.18T. Stars and downloads measure adoption; tokens measure actual usage — and usage tells a different story.
+- 🔴 **Gemini 3.5 Flash gets native computer use — replacing standalone 2.5 model** — Google integrated computer use as a built-in tool in Gemini 3.5 Flash (Jun 24), replacing the separate Gemini 2.5 computer use model. Developers call the standard Flash endpoint and enable `computer_use`. Browserbase, Browser Use, and UiPath all endorse it for cost/performance. Enterprise safeguards include prompt-injection auto-stop and confirmation for sensitive actions.
+- 🟡 **AI SDK 7 + PydanticAI v2.0 ship in the same week** · `pydanticai` — Vercel's AI SDK 7 (16M weekly downloads) adds durable WorkflowAgent, tool approvals, sandbox support, and agent harness integration (Codex, Claude Code, Deep Agents). PydanticAI v2.0 goes stable with a capabilities-as-primitive harness-first design. Both signal the framework layer maturing toward production agent orchestration.
 
 **What to watch:**
-- **Antigravity CLI adoption vs migration away from Google** (next 2-4 weeks) — Google forced the entire Gemini CLI community to either adopt a closed-source replacement or switch to a provider-independent tool (Codex CLI, Aider, Claude Code). TheRouter frames this as a 'forcing function' toward multi-model routing. Watch whether OpenCode/Codex CLI see a star surge from Gemini CLI refugees.
-- **OpenAI platform consolidation (Agent Builder + Evals + Pulse sunsetting)** (Q3-Q4 2026) — OpenAI is retiring Agent Builder, Evals, and Pulse — pushing users to the Agents SDK and Workspace Agents. This consolidates the OpenAI agent stack around fewer surfaces. Teams using these have deadlines (Nov 30 for Agent Builder/Evals).
-- **Agent Skills standard adoption accelerating** (ongoing) — 32+ tools now read the same SKILL.md format (incl. Antigravity CLI). Published Dec 2025; adopted by Microsoft+OpenAI within 48h. This is becoming the de-facto interop layer for agent capabilities.
+- **Continue.dev user migration (Jul 15 deadline)** (next 2-4 weeks) — 34.5k-star codebase going read-only displaces a large BYOK/local-model user base. Migration targets: Cline (open-source, BYOK), GitHub Copilot (JetBrains users), Cursor (acquirer). Watch star surges on Cline and whether the Apache 2.0 community forks Continue into a maintained successor.
+- **Hermes vs OpenClaw token gap widening** (ongoing) — Hermes's self-authoring skill system drives heavier per-session token usage than OpenClaw's static SKILL.md model. If the OpenRouter gap keeps widening, it signals deeper engagement on Hermes — not just more installs. OpenClaw still leads on breadth (stars, downloads, channels).
+- **Vertex AI SDK removal breaking production code** (immediate) — Google removed the Vertex AI generative AI modules on Jun 24 (1 year after deprecation). Any code importing from `vertexai.generative_models` is now broken. Migration to `google-genai` is required. Teams running Gemini via the old SDK have broken production right now.
 
 ---
 
