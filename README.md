@@ -1,12 +1,12 @@
 # Awesome AI Tools — 2026
 
-> A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-23)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
+> A curated, opinionated map of the **user-facing AI-tools landscape (as of 2026-06-27)** — CLI coding agents, OpenClaw-style "always-on" personal assistants, computer-use & browser agents, and agent frameworks / SDKs.
 >
-> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 39 of 42 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
+> Built from a four-track research survey with a source-verification pass, refreshed weekly. Every entry is sourced. Star counts are point-in-time; 44 of 47 repos verified directly from the GitHub API (the rest marked `≈` / `unverified`). See [Methodology & Caveats](#methodology).
 
 <div align="center">
 
-**71 tools** · **4 overlapping layers** · **Updated 2026-06-23**
+**76 tools** · **4 overlapping layers** · **Updated 2026-06-27**
 
 </div>
 
@@ -35,7 +35,7 @@
 <a name="landscape"></a>
 ## 🧭 The Landscape in One Screen
 
-The clearest mental model: **the CLI coding agents are the substrate; the OpenClaw-style always-on personal assistants are the new application layer that orchestrates them.** As of 2026-06-23, the landscape has consolidated around four overlapping layers, with the headline story being a genuinely new product category — self-hosted, chat-reachable, persistent, proactive, computer-controlling assistants.
+The clearest mental model: **the CLI coding agents are the substrate; the OpenClaw-style always-on personal assistants are the new application layer that orchestrates them.** As of 2026-06-27, the landscape has consolidated around four overlapping layers, with the headline story being a genuinely new product category — self-hosted, chat-reachable, persistent, proactive, computer-controlling assistants.
 
 | # | Layer | Key fact | State of play |
 |---|-------|----------|---------------|
@@ -64,7 +64,7 @@ Looking for a specific use case? These are the top picks across each category:
 | Mature OSS pair-programmer | **[Aider](https://github.com/Aider-AI/aider)** ![active](https://img.shields.io/badge/active-brightgreen) | Battle-tested git-integrated loop; hosts the widely-cited LLM coding leaderboard. |
 | Self-hosted always-on personal assistant | **[OpenClaw](https://github.com/openclaw/openclaw)** ![active](https://img.shields.io/badge/active-brightgreen) | The category reference: 20+ chat surfaces, persistent memory, proactive heartbeats, self-hackable skills. |
 | Browser automation library | **[Browser Use](https://github.com/browser-use/browser-use)** ![active](https://img.shields.io/badge/active-brightgreen) | Dominant OSS Playwright-based primitive (~100k★); commercial 'Box' adds 24/7 cloud runs. |
-| Type-safe Python agent framework | **[PydanticAI](https://github.com/pydantic/pydantic-ai)** ![beta](https://img.shields.io/badge/beta-orange) | FastAPI-feeling, fully typed, model-agnostic with strong OTel/Logfire observability. |
+| Type-safe Python agent framework | **[PydanticAI](https://github.com/pydantic/pydantic-ai)** ![active](https://img.shields.io/badge/active-brightgreen) | FastAPI-feeling, fully typed, model-agnostic with strong OTel/Logfire observability. |
 | Multi-agent orchestration (durable graphs) | **[LangGraph](https://github.com/langchain-ai/langgraph)** ![GA](https://img.shields.io/badge/GA-brightgreen) | 1.0 GA durable graph orchestration with first-class human-in-the-loop interrupts + memory. |
 | Production agent SDK (OpenAI stack) | **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** ![active](https://img.shields.io/badge/active-brightgreen) | Handoffs, sandbox agents, guardrails, tracing, realtime voice — productionized Swarm successor. |
 | Best AI-native IDE | **[Cursor](https://cursor.com)** ![active](https://img.shields.io/badge/active-brightgreen) | $100M+ ARR, best @codebase indexing, Composer multi-file edits, Background Agents, BugBot PR review. |
@@ -79,8 +79,8 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 
 ### Vendor CLIs (proprietary)
 
-- **[Claude Code](https://github.com/anthropics/claude-code)** ![active](https://img.shields.io/badge/active-brightgreen) — Reasoning-quality leader (v2.1.185). Fully agentic: multi-file edits, sandboxed bash, subagents, MCP, hooks, headless + background agents. Auto-mode safety (blocks destructive git/terraform commands). Improved API waiting UX (20s threshold). Split-credit pricing (Jun 15, 2026). · `Proprietary` · ≈133.3k★ *GitHub API, 2026-06-19*
-- **[Codex CLI](https://github.com/openai/codex)** ![active](https://img.shields.io/badge/active-brightgreen) — Sandboxed agentic execution; Rust rewrite. Bundled with ChatGPT plans or API-metered. Top vendor CLI on Terminal-Bench. · `Apache-2.0` · Rust · ≈92.1k★ *GitHub API, 2026-06-19*
+- **[Claude Code](https://github.com/anthropics/claude-code)** ![active](https://img.shields.io/badge/active-brightgreen) — Reasoning-quality leader (v2.1.185). Fully agentic: multi-file edits, sandboxed bash, subagents, MCP, hooks, headless + background agents. Auto-mode safety (blocks destructive git/terraform commands). Improved API waiting UX (20s threshold). Split-credit pricing (Jun 15, 2026). · `Proprietary` · ≈134.6k★ *GitHub API, 2026-06-27*
+- **[Codex CLI](https://github.com/openai/codex)** ![active](https://img.shields.io/badge/active-brightgreen) — Sandboxed agentic execution; Rust rewrite. Bundled with ChatGPT plans or API-metered. Top vendor CLI on Terminal-Bench. · `Apache-2.0` · Rust · ≈94.0k★ *GitHub API, 2026-06-27*
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** ![dead](https://img.shields.io/badge/dead-red) — DEAD. Shut down June 18, 2026. All consumer accounts (free/Pro/Ultra) received HTTP 410 Gone. Replaced by closed-source Antigravity CLI (agy). 105k-star OSS project orphaned. Enterprise customers retain access via paid Gemini Enterprise Agent Platform API keys. · `Apache-2.0` · TypeScript · ≈105.4k★ *GitHub API, 2026-06-19 — SHUT DOWN Jun 18*
 - **[Antigravity CLI](https://antigravity.google)** ![active](https://img.shields.io/badge/active-brightgreen) — Replaces the dead Gemini CLI. Closed-source Go binary (agy) with async multi-agent orchestration. Shares architecture with Antigravity 2.0 desktop app. Supports Agent Skills, Hooks, Subagents, Extensions. No source code, tighter quotas, no multi-model routing. · `Proprietary (closed source)` · Go
 - **[Junie](https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/)** ![GA](https://img.shields.io/badge/GA-brightgreen) — JetBrains AI coding agent — GA June 2026. Advanced Plan mode (structured doc with PRD/tech design/delivery/testing tabs), PR review with project context, long-running tasks. Uses real JetBrains debugger and project tools. Works in IDE + terminal. · `Proprietary`
@@ -98,7 +98,9 @@ The most mature and crowded segment. Splits into **vendor CLIs** (closed, subscr
 ### AI-native terminals & legacy
 
 - **[Warp](https://github.com/warpdotdev/warp)** ![active](https://img.shields.io/badge/active-brightgreen) — AI-native terminal — replaces the shell itself (NL→bash, block-based dev env), not a coding agent running inside one. · `Client AGPL-3.0 / server proprietary` · Rust · ≈62.0k★ *GitHub API, 2026-06-19*
-- **[Continue](https://github.com/continuedev/continue)** ![archived](https://img.shields.io/badge/archived-lightgrey) — ARCHIVED after final 2.0.0 release (VS Code ext, cn CLI, JetBrains plugin). Historical: PR-checks agents. · `Apache-2.0` · TypeScript
+- **[Continue](https://github.com/continuedev/continue)** ![acquired](https://img.shields.io/badge/acquired-blue) — ACQUIRED by Cursor (SpaceX acquired Cursor for $60B). Repo goes read-only July 15, 2026. Code stays public under Apache 2.0 but hosted service and roadmap are dead. Historical: open-source VS Code/JetBrains agent with BYOK completions and local model support. · `Apache-2.0` · TypeScript · ≈34.5k★ *GitHub API, 2026-06-27*
+- **[MiMo Code](https://github.com/XiaomiMiMo/MiMo-Code)** ![active](https://img.shields.io/badge/active-brightgreen) — Xiaomi's open-source terminal coding agent, built on the OpenCode project. Adds long-term memory, specialized working modes, and state management for multi-hundred-step agentic tasks. MIT licensed. Bundled with free limited-time access to MiMo-V2.5 (1M token context). Claims to surpass Claude Code in complex programming benchmarks. · `MIT` · TypeScript · ≈10.9k★ *GitHub API, 2026-06-27*
+- **[Grok Build](https://x.ai/cli)** ![active](https://img.shields.io/badge/active-brightgreen) — xAI's terminal coding agent with `/goal` mode (Jun 22): long-running autonomous execution with built-in verification. Agent plans, breaks work into a progress checklist, and executes until complete — reviewing code, inspecting webpages, or running scripts. `/goal status/pause/resume/clear` for steering. Requires SuperGrok or X Premium Plus subscription. · `Proprietary` · Go
 
 > **CLI takeaways:** pricing is converging on subscription-plus-credits. The OSS field has standardized on multi-provider + BYO-key. Discontinuations matter (Q CLI → Kiro OSS→closed; Continue archived; Cody → Amp) — the deprecated tools are best avoided.
 
@@ -115,11 +117,11 @@ A tool qualifies for this category only if it satisfies all seven criteria: (a) 
 
 | Project | License · Lang | Stars | Focus |
 |---|---|---|---|
-| **[OpenClaw](https://github.com/openclaw/openclaw)** ![active](https://img.shields.io/badge/active-brightgreen) | `MIT` · TypeScript, Swift | ≈379.4k★ *GitHub API, 2026-06-19* | The reference open-source always-on personal assistant: self-hosted Gateway daemon, 20+ chat surfaces, markdown memory, 30-min heartbeats, self-hackable SKILL.… |
+| **[OpenClaw](https://github.com/openclaw/openclaw)** ![active](https://img.shields.io/badge/active-brightgreen) | `MIT` · TypeScript, Swift | ≈380.6k★ *GitHub API, 2026-06-27* | The reference open-source always-on personal assistant (380k★). Self-hosted Gateway daemon, 20+ chat surfaces, markdown memory, self-hackable SKILL.md skills. … |
 | **[Memoh](https://github.com/memohai/Memoh)** ![active](https://img.shields.io/badge/active-brightgreen) | `AGPL-3.0` · Go, Vue, Rust | ≈1.9k★ *GitHub API via Exa, 2026-06-23* | Closest structural peer to OpenClaw. Each agent gets its own containerized 'cloud computer' (FS, desktop, browser, network, memory). Copyleft license. v0.13.1 … |
 | **[OwnPilot](https://github.com/ownpilot/ownpilot)** ![active](https://img.shields.io/badge/active-brightgreen) | `MIT` · TypeScript | — | Explicitly OpenClaw-derived ('Claw' naming + SKILL.md). Strongest feature overlap incl. edge/IoT device control, soul agents, crews. |
 | **[Lethe](https://github.com/atemerev/lethe)** ![active](https://img.shields.io/badge/active-brightgreen) | `MIT` · Rust (~50 MB binary) | — | Most architecturally distinctive: brain-inspired multi-actor design, self-modifying loop (per README). Narrower channel surface (Telegram + HTTP/SSE only). Bor… |
-| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** ![active](https://img.shields.io/badge/active-brightgreen) | `Apache-2.0` · Python | ≈197.5k★ *GitHub API, 2026-06-19 (last known — rate limited this run)* | Self-improving always-on agent. v0.17.0 'Reach Release' (Jun 19): iMessage support (Photon), Raft agent network, desktop app with rebindable shortcuts + subage… |
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** ![active](https://img.shields.io/badge/active-brightgreen) | `Apache-2.0` · Python | ≈203.9k★ *GitHub API, 2026-06-27* | Self-improving always-on agent (203k★). v0.17.0 'Reach Release': iMessage (Photon), Raft agent network, desktop app, background subagents, Blank Slate setup. `… |
 
 ### Proprietary equivalents
 
@@ -130,6 +132,7 @@ Recent tech press frames these as the industry's answer to OpenClaw. *(Note: "re
 - **[Gemini Spark / auto-browse](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/)** ![announced](https://img.shields.io/badge/announced-blue) — Successor to shut-down Project Mariner. auto-browse shipping in Chrome; Gemini Spark = 24/7 personal agent (I/O 2026). WebMCP origin trial in Chrome 149. · `Proprietary`
 - **Manus (Meta)** ![uncertain](https://img.shields.io/badge/uncertain-yellow) — Cross-platform chat-reachable autonomous agent; 'My Computer' desktop mode (Mar 2026). Meta moving to UNWIND the deal (Beijing divestiture order, Jun 2026). Future in flux. · `Proprietary`
 - **Mistral Vibe (ex-Le Chat)** ![active](https://img.shields.io/badge/active-brightgreen) — Rebranded from Le Chat. Work Mode (agentic enterprise workflows, knowledge search, document synthesis) + Code Mode (GitHub integration, sandboxed sessions, PR workflow) + VS Code extension + CLI with skills/custom modes/subagents/teleport session migration. $14.99/mo Pro, $24.99/user/mo Team. · `Proprietary`
+- **[QwenPaw](https://github.com/agentscope-ai/QwenPaw)** ![active](https://img.shields.io/badge/active-brightgreen) — Self-hostable personal AI assistant (20k★) from Alibaba's AgentScope team. Easy install on own machine or cloud. Supports multiple chat apps with extensible capabilities via skills. 190+ contributors, 85 releases. v2.0.0-beta.1 latest. · `Apache-2.0` · Python, TypeScript · ≈20.2k★ *GitHub API, 2026-06-27*
 
 ### Adjacent (explicitly NOT the same category)
 
@@ -188,13 +191,14 @@ The headline numbers are moving fast and **almost entirely vendor-self-reported*
 - **[Microsoft AutoGen](https://github.com/microsoft/autogen)** ![maintenance](https://img.shields.io/badge/maintenance-yellow) — MAINTENANCE MODE. Event-driven multi-agent. Users directed to Microsoft Agent Framework. · `CC-BY-4.0` · Python, .NET · ≈59.1k★ *GitHub API, 2026-06-19*
 - **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework)** ![GA](https://img.shields.io/badge/GA-brightgreen) — 1.0 GA. Official successor merging AutoGen + Semantic Kernel. Graph workflows, durable/restartable, A2A + MCP interop. · `MIT` · Python, .NET · ≈11.5k★ *GitHub API, 2026-06-19*
 - **[Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/)** ![GA](https://img.shields.io/badge/GA-brightgreen) — GA managed agent platform. Two API calls (CreateHarness + InvokeHarness) to run production agents. Runtime (isolated FS+shell), Memory, Gateway, Browser, Identity, Observability. CloudWatch-traced. MCP support. · `Proprietary` · Python
+- **[AgentGateway](https://github.com/agentgateway/agentgateway)** ![active](https://img.shields.io/badge/active-brightgreen) — Open-source AI-native proxy/data plane (3.5k★). One high-performance Rust proxy governs all agent traffic: agent-to-LLM, agent-to-tool (via MCP), and agent-to-agent (via A2A), plus ordinary HTTP/gRPC. Donated to the Linux Foundation (Aug 2025). Contributors from AWS, Cisco, IBM, Microsoft, Red Hat. Handles auth, rate limiting, observability, and policy enforcement across all agent traffic. · `Apache-2.0` · Rust · ≈3.5k★ *GitHub API, 2026-06-27*
 
 ### Orchestration layer
 
 - **[LangGraph](https://github.com/langchain-ai/langgraph)** ![GA](https://img.shields.io/badge/GA-brightgreen) — 1.0 GA Oct 2025. Low-level stateful/durable graph orchestration with first-class HITL interrupts + memory. Deep Agents harness on top. · `MIT` · Python, JS/TS · ≈35.2k★ *GitHub API, 2026-06-19*
 - **[CrewAI](https://github.com/CrewAIInc/CrewAI)** ![active](https://img.shields.io/badge/active-brightgreen) — Role-based Crews (autonomous agent teams) + deterministic Flows. Standalone since v1.14 (no LangChain dep). Fortune-500 traction claimed. · `MIT` · Python · ≈53.9k★ *GitHub API, 2026-06-19*
 - **[PocketFlow](https://github.com/The-Pocket/PocketFlow)** ![active](https://img.shields.io/badge/active-brightgreen) — Deliberately 100-line minimalist graph framework, zero dependencies. Positioned for 'let Cursor/Claude build agents on top.' · `MIT` · Python, TS, Java, C++, Go · ≈10.8k★ *GitHub API, 2026-06-19*
-- **[PydanticAI](https://github.com/pydantic/pydantic-ai)** ![beta](https://img.shields.io/badge/beta-orange) — 'FastAPI-feeling,' fully type-safe, model-agnostic. Tight OTel/Logfire observability. v2.0 beta. · `MIT` · Python · ≈17.9k★ *GitHub API, 2026-06-19*
+- **[PydanticAI](https://github.com/pydantic/pydantic-ai)** ![active](https://img.shields.io/badge/active-brightgreen) — 'FastAPI-feeling,' fully type-safe, model-agnostic. v2.0.0 stable (Jun 23): harness-first design with capabilities as a core primitive — a composable unit bundling tools, hooks, instructions, and model settings. Built-in OpenTelemetry/Logfire observability, AG-UI protocol support. · `MIT` · Python · ≈18.0k★ *GitHub API, 2026-06-27*
 - **[smolagents](https://github.com/huggingface/smolagents)** ![active](https://img.shields.io/badge/active-brightgreen) — Agents that 'think in code' — CodeAgent writes Python (sandboxed via E2B/Modal/Docker) vs JSON ToolCallingAgent. ~1k-line core. · `Apache-2.0` · Python · ≈27.9k★ *GitHub API, 2026-06-19*
 - **[LlamaIndex](https://github.com/run-llama/llama_index)** ![active](https://img.shields.io/badge/active-brightgreen) — RAG-native 'document agent' platform. Multi-agent via AgentWorkflow + custom planners. · `MIT` · Python, TS · ≈50.2k★ *GitHub API, 2026-06-19*
 
@@ -230,7 +234,7 @@ These tools don't run agents themselves — they manage parallel AI coding agent
 - **[cmux](https://github.com/manaflow-ai/cmux)** ![active](https://img.shields.io/badge/active-brightgreen) — The dominant agent multiplexer by traction (22.7k★). Native macOS terminal built on libghostty with agent-state awareness, subagent-to-pane promotion, built-in browser automation pane, iOS app (beta), Unix socket + CLI API, skills system, SSH remote attach. Survives full reboots with session restore. · `MIT` · Swift (AppKit + libghostty) · ≈22.7k★ *GitHub API, 2026-06-19*
 - **[Agent of Empires (AoE)](https://github.com/agent-of-empires/agent-of-empires)** ![active](https://img.shields.io/badge/active-brightgreen) — TUI + web dashboard (PWA) session manager for AI coding agents. Each agent in its own tmux session + git worktree. Docker sandboxing option. Mobile phone access via built-in HTTP server. 104 releases — one of the most actively developed in the category. · `MIT` · Rust · ≈2.6k★ *GitHub API, 2026-06-19*
 - **[dmux](https://github.com/standardagents/dmux)** ![active](https://img.shields.io/badge/active-brightgreen) — Dev agent multiplexer for git worktrees. Each pane gets its own worktree + branch for full isolation. Multi-select agent launches (run different agents per pane). AI-named branches/commits, smart one-step merge, built-in file browser, lifecycle hooks. · `MIT` · TypeScript, Shell · ≈1.7k★ *GitHub API, 2026-06-19*
-- **[Multica](https://github.com/multica-ai/multica)** ![active](https://img.shields.io/badge/active-brightgreen) — Kanban board orchestration for coding agents (37.7k★). Agents get profiles, skills, and assigned issues with statuses — like human teammates in Linear. Vendor-neutral, drives 12+ CLIs. Control plane (Next.js + Go + Postgres) in the cloud, daemon runs agents locally in git worktrees on the user's machine. Uses existing subscriptions, not API keys. · `Apache-2.0` · Go, TypeScript, Next.js · ≈37.7k★ *GitHub API, 2026-06-23*
+- **[Multica](https://github.com/multica-ai/multica)** ![active](https://img.shields.io/badge/active-brightgreen) — Kanban board orchestration for coding agents (37.7k★). Agents get profiles, skills, and assigned issues with statuses — like human teammates in Linear. Vendor-neutral, drives 12+ CLIs. Control plane (Next.js + Go + Postgres) in the cloud, daemon runs agents locally in git worktrees on the user's machine. Uses existing subscriptions, not API keys. · `Apache-2.0` · Go, TypeScript, Next.js · ≈38.2k★ *GitHub API, 2026-06-27*
 - **[Parallel Code](https://github.com/johannesjo/parallel-code)** ![active](https://img.shields.io/badge/active-brightgreen) — GUI desktop app for parallel multi-agent coding. Auto-creates git worktree per task (zero conflict between agents). QR-code phone monitoring over Wi-Fi/Tailscale. Keyboard-first navigation. Merge back to main from sidebar. · `MIT` · TypeScript · ≈744★ *GitHub API, 2026-06-19*
 - **[Agent Deck](https://github.com/asheshgoplani/agent-deck)** ![active](https://img.shields.io/badge/active-brightgreen) — Go-based TUI 'command center' for AI coding agents. 343 releases — most iterated tool in category. Groups, search, session forking, git worktrees, per-agent cost tracking, and a phone-controlled 'Conductor' mode for fleet management. · `MIT` · Go · ≈352★ *GitHub API, 2026-06-19*
 - **[Herdr](https://github.com/mxhm/herdr)** ![active](https://img.shields.io/badge/active-brightgreen) — The reference agent multiplexer — tmux for AI coding agents. Workspaces, tabs, panes with agent-state awareness (blocked/working/done/idle). Detach/reattach over SSH, sessions persist. Unix socket API lets agents orchestrate each other. No GUI, no Electron, runs anywhere you can ssh. · `MIT` · Rust
@@ -239,6 +243,7 @@ These tools don't run agents themselves — they manage parallel AI coding agent
 - **[RelayDeck](https://github.com/relaydeck/relaydeck)** ![beta](https://img.shields.io/badge/beta-orange) — Local-first fleet OS for CLI coding agents. Runs vendor CLIs unattended in PTYs. Agents discover peers by purpose/tags with durable peer-to-peer messaging. Plugin-extensible (harnesses, providers, skills, automations). State in local SQLite, secrets in on-host vault. No cloud account, no telemetry. · `MIT` · Go · ≈60★ *GitHub API, 2026-06-19*
 - **[Fleet](https://github.com/nicknisi/fleet)** ![active](https://img.shields.io/badge/active-brightgreen) — Terminal dashboard for managing multiple Claude Code sessions in tmux. Hooks into Claude Code's event system for real-time agent state tracking. 7 agent states sorted by urgency. Send prompts, approve permissions, filter sessions — all from one pane. Compiled Bun binary. · `MIT` · TypeScript (Bun) · ≈10★ *GitHub API, 2026-06-19*
 - **Databricks Omnigent** ![active](https://img.shields.io/badge/active-brightgreen) — Meta-harness over existing AI agents. Encapsulates any agent (terminal-based or SDK-based) in a runner with sandbox session + unified API. Central server provides policies, session management, and sharing. Strict separation of governance from business logic — policies apply across all connected harnesses. Terminal, web UI, macOS app, mobile, and API surfaces. · `Apache-2.0` · Python
+- **[Stably Orca](https://github.com/stablyai/orca)** ![active](https://img.shields.io/badge/active-brightgreen) — Agent Development Environment (ADE) for running a fleet of parallel coding agents (8k★). Each agent gets its own git worktree. Design Mode: click any UI element in embedded Chromium and send HTML/CSS/screenshot to an agent's prompt. Diff annotation layer for inline review. GitHub + Linear integration. Mobile companion (iOS/Android) for monitoring. Agents can also drive Orca via Computer Use mode. · `MIT` · TypeScript, Rust · ≈8.0k★ *GitHub API, 2026-06-27*
 
 ---
 
@@ -250,7 +255,7 @@ These tools were once relevant but are now deprecated, archived, or dead. Listed
 | Tool | Status | What happened |
 |---|---|---|
 | **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | ![dead](https://img.shields.io/badge/dead-red) | DEAD. Shut down June 18, 2026. All consumer accounts (free/Pro/Ultra) received HTTP 410 Gone. Replaced by closed-source Antigravity CLI (ag… |
-| **[Continue](https://github.com/continuedev/continue)** | ![archived](https://img.shields.io/badge/archived-lightgrey) | ARCHIVED after final 2.0.0 release (VS Code ext, cn CLI, JetBrains plugin). Historical: PR-checks agents. |
+| **[Continue](https://github.com/continuedev/continue)** | ![acquired](https://img.shields.io/badge/acquired-blue) | ACQUIRED by Cursor (SpaceX acquired Cursor for $60B). Repo goes read-only July 15, 2026. Code stays public under Apache 2.0 but hosted serv… |
 | **[Project Mariner](https://labs.google.com/mariner/landing)** | ![dead](https://img.shields.io/badge/dead-red) | SHUT DOWN May 4, 2026. Browser automation proved too brittle (CAPTCHAs, anti-bot, layout drift). Tech folded into Gemini surfaces. |
 | **Manus (Meta)** | ![uncertain](https://img.shields.io/badge/uncertain-yellow) | Cross-platform chat-reachable autonomous agent; 'My Computer' desktop mode (Mar 2026). Meta moving to UNWIND the deal (Beijing divestiture … |
 | **[Microsoft AutoGen](https://github.com/microsoft/autogen)** | ![maintenance](https://img.shields.io/badge/maintenance-yellow) | MAINTENANCE MODE. Event-driven multi-agent. Users directed to Microsoft Agent Framework. |
@@ -262,20 +267,20 @@ These tools were once relevant but are now deprecated, archived, or dead. Listed
 ---
 
 <a name="trending"></a>
-## 📈 Trending Repos Snapshot (2026-06-23)
+## 📈 Trending Repos Snapshot (2026-06-27)
 
 User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
 
 | Repo | Stars (≈) | Category | Why notable |
 |---|---|---|---|
-| [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | ~379.4k | Always-on assistant | The reference open-source always-on personal assistant: self-hosted Gateway daemon, 20+ c… |
-| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | ~197.5k | Always-on assistant | Self-improving always-on agent. v0.17.0 'Reach Release' (Jun 19): iMessage support (Photo… |
+| [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | ~380.6k | Always-on assistant | The reference open-source always-on personal assistant (380k★). Self-hosted Gateway daemo… |
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | ~203.9k | Always-on assistant | Self-improving always-on agent (203k★). v0.17.0 'Reach Release': iMessage (Photon), Raft … |
 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode) | ~176.2k | CLI coding agent | Highest-traction OSS terminal coding agent. Multi-session parallel agents, desktop beta. … |
 | [`anthropics/skills`](https://github.com/anthropics/skills) | ~152.6k | Agent framework / SDK | Reference impl of the Agent Skills standard (SKILL.md capability packs). Widely cited as … |
-| [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | ~133.3k | CLI coding agent | Reasoning-quality leader (v2.1.185). Fully agentic: multi-file edits, sandboxed bash, sub… |
+| [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | ~134.6k | CLI coding agent | Reasoning-quality leader (v2.1.185). Fully agentic: multi-file edits, sandboxed bash, sub… |
 | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | ~105.4k | CLI coding agent | DEAD. Shut down June 18, 2026. All consumer accounts (free/Pro/Ultra) received HTTP 410 G… |
 | [`browser-use/browser-use`](https://github.com/browser-use/browser-use) | ~99.5k | Computer-use / browser | Widely-used OSS browser-agent library (Playwright). Rust-backed beta (0.13.0). Commercial… |
-| [`openai/codex`](https://github.com/openai/codex) | ~92.1k | CLI coding agent | Sandboxed agentic execution; Rust rewrite. Bundled with ChatGPT plans or API-metered. Top… |
+| [`openai/codex`](https://github.com/openai/codex) | ~94.0k | CLI coding agent | Sandboxed agentic execution; Rust rewrite. Bundled with ChatGPT plans or API-metered. Top… |
 | [`zed-industries/zed`](https://github.com/zed-industries/zed) | ~85.6k | Desktop app / IDE | Fastest AI IDE — sub-second cold start, 2ms input latency. Rust-native (not a VS Code for… |
 | [`OpenHands/OpenHands`](https://github.com/OpenHands/OpenHands) | ~77.7k | Computer-use / browser | Self-hosted 'developer control center'. Runs its own agent OR Claude Code/Codex/Gemini. S… |
 | [`cline/cline`](https://github.com/cline/cline) | ~63.5k | Agent framework / SDK | Pioneer agentic VS Code extension, repositioned as ONE runtime across IDE + terminal + SD… |
@@ -286,7 +291,7 @@ User-facing focus; star counts point-in-time and *unverified*. Sorted by stars.
 <a name="this-week"></a>
 ## 🗓️ This Week
 
-Week of **2026-06-23**.
+Week of **2026-06-27**.
 
 - 🔴 **Gemini CLI is DEAD — shut down June 18, replaced by closed-source Antigravity CLI** · `gemini-cli` — Google killed Gemini CLI for all consumer accounts (free/Pro/Ultra). The 105k-star OSS project's replacement, Antigravity CLI (agy), is a closed-source Go binary with async multi-agent orchestration. CI/CD pipelines calling `gemini` broke immediately. Enterprise users retain access. This is the biggest tool death in the CLI coding-agent category this year.
 - 🔴 **Fable 5 / Mythos 5 suspended by US government directive** — Anthropic confirmed via primary source that the US government issued an export control directive suspending all access to Fable 5 and Mythos 5 (citing a jailbreak/national security concern). All customers affected. This means the OSWorld-Verified >85% scores citing these models are now non-reproducible.
@@ -305,7 +310,7 @@ Week of **2026-06-23**.
 
 Read this before citing anything here. This is a **landscape map, not a benchmark study.**
 
-- **Star counts are popularity, not quality** — point-in-time snapshots that drift within days. 39 of 42 tracked repos were verified directly from the GitHub API on 2026-06-23; the remainder are marked *unverified* (pulled from tracker/repo pages, not re-pulled).
+- **Star counts are popularity, not quality** — point-in-time snapshots that drift within days. 44 of 47 tracked repos were verified directly from the GitHub API on 2026-06-27; the remainder are marked *unverified* (pulled from tracker/repo pages, not re-pulled).
 - **The OSWorld "human parity" story is not clean.** Vendor self-reports vary by ~10 points across aggregators (75% / 83.4% / 85%); the only claimed crossing (Agent S3, 72.60%) is vendor-reported, best-of-N (single-pass 66%), and on no independent leaderboard.
 - **The OpenClaw "self-hackable / AGI-like" rhetoric is ahead of the verified evidence.** The skill-creator + hot-reload machinery is real and code-confirmed; the reliable in-practice quality of agent-authored skills is **not independently benchmarked.**
 - **Vendor causation is not confirmed** — proprietary launches framed as "responses to OpenClaw" are press inference, not vendor statements.
@@ -318,4 +323,4 @@ Read this before citing anything here. This is a **landscape map, not a benchmar
 
 The research and curation in this repository are provided as-is for the community. Individual tools retain their own licenses (noted per entry). Where this README's prose is original to this repo, it is licensed MIT.
 
-<p align="center"><sub>⚠️ <strong>NOTICE.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-23.</sub></p>
+<p align="center"><sub>⚠️ <strong>NOTICE.</strong> This README is produced by an automated weekly research pipeline and may contain errors, outdated information, or omissions. Star counts are point-in-time snapshots. Always verify critical details (tool status, pricing, security claims, license terms) against primary sources before relying on them. Last pipeline run: 2026-06-27.</sub></p>
