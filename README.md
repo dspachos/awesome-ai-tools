@@ -230,6 +230,7 @@ The headline numbers are moving fast and **almost entirely vendor-self-reported*
 
 ### Orchestration layer
 
+- **[AIWG](https://github.com/jmagly/aiwg)** ![active](https://img.shields.io/badge/active-brightgreen) — Project-owned agents, skills, context, and governed workflows deployed into the native paths used by multiple coding platforms. · `MIT` · TypeScript · 209★ *GitHub API, 2026-09-03*
 - **[LangGraph](https://github.com/langchain-ai/langgraph)** ![GA](https://img.shields.io/badge/GA-brightgreen) — 1.0 GA Oct 2025. Low-level stateful/durable graph orchestration with first-class HITL interrupts + memory. Deep Agents harness on top. · `MIT` · Python, JS/TS · 39.8k★ *GitHub API, 2026-08-16*
 - **[CrewAI](https://github.com/CrewAIInc/CrewAI)** ![active](https://img.shields.io/badge/active-brightgreen) — Role-based Crews (autonomous agent teams) + deterministic Flows. Standalone since v1.14 (no LangChain dep). Fortune-500 traction claimed. · `MIT` · Python · 57.1k★ *GitHub API, 2026-08-16*
 - **[PocketFlow](https://github.com/The-Pocket/PocketFlow)** ![active](https://img.shields.io/badge/active-brightgreen) — Deliberately 100-line minimalist graph framework, zero dependencies. Positioned for 'let Cursor/Claude build agents on top.' · `MIT` · Python, TS, Java, C++, Go · 11.1k★ *GitHub API, 2026-08-16*
